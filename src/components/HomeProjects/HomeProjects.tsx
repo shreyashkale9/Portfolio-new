@@ -8,11 +8,7 @@ import './HomeProjects.css';
  * @returns {React.JSX.Element} The home projects section component
  */
 const HomeProjects: React.FC = (): React.JSX.Element => {
-  // Get featured projects from ProjectGrid component
-  const getFeaturedProjects = () => {
-    // This will be handled by ProjectGrid with featured filter
-    return [];
-  };
+
   return (
     <section className="home-projects section">
       <div className="container">

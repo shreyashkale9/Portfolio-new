@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 import './Experience.css';
 
 /**

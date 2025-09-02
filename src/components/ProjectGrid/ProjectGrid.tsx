@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Eye } from 'lucide-react';
+
 import ProjectCard from '../ProjectCard/ProjectCard';
 import './ProjectGrid.css';
 
