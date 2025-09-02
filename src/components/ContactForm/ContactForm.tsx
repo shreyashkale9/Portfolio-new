@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Send, User, Mail, MessageSquare, Phone } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
 /**
@@ -18,6 +19,15 @@ const ContactForm: React.FC = (): React.JSX.Element => {
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+
+  // Initialize EmailJS
+  useEffect(() => {
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -57,18 +67,52 @@ const ContactForm: React.FC = (): React.JSX.Element => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Thank you for your message! I will get back to you soon.');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
+    try {
+      // Prepare email template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        from_phone: formData.phone || 'Not provided',
+        subject: formData.subject || 'Portfolio Contact Form',
+        message: formData.message,
+        to_name: 'Shreyash Kale'
+      };
+
+      // Get EmailJS credentials from environment variables
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
+      }
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      if (response.status === 200) {
+        alert('Message sent successfully! I will get back to you soon.');
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      }
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      alert('Failed to send message. Please try again or contact me directly.');
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -79,6 +123,8 @@ const ContactForm: React.FC = (): React.JSX.Element => {
       transition={{ duration: 0.6 }}
     >
       <h3 className="form-title">Send Message</h3>
+      
+
       
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
@@ -172,6 +218,8 @@ const ContactForm: React.FC = (): React.JSX.Element => {
           <Send className="btn-icon" />
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
+
+
       </form>
     </motion.div>
   );

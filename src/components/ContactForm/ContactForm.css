@@ -106,6 +106,8 @@
   cursor: not-allowed;
 }
 
+
+
 @media (max-width: 768px) {
   .contact-form {
     padding: 1.5rem;
