@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone, Clock, Globe, MessageCircle, Github, Twitter, Linkedin } from 'lucide-react';
+import { MapPin, Mail, Phone, Clock, Github, Twitter, Linkedin } from 'lucide-react';
 import './ContactInfo.css';
 
 /**

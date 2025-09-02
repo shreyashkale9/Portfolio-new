@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, MapPin, Calendar, Mail, Phone } from 'lucide-react';
+import { User, MapPin, Mail, Phone } from 'lucide-react';
 import './AboutHero.css';
 
 /**
