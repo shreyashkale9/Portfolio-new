@@ -1,0 +1,115 @@
+.personal-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.125rem;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.tag-open {
+  color: var(--primary-color);
+  animation: tagGlow 3s ease-in-out infinite;
+}
+
+.tag-slash {
+  color: var(--accent-color);
+  animation: tagGlow 3s ease-in-out infinite 0.5s;
+}
+
+.tag-close {
+  color: var(--secondary-color);
+  animation: tagGlow 3s ease-in-out infinite 1s;
+}
+
+/* Hover effects */
+.personal-logo:hover .logo-container {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.personal-logo:hover .logo-tag {
+  transform: scale(1.1);
+}
+
+.personal-logo:hover .tag-open {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.personal-logo:hover .tag-slash {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+.personal-logo:hover .tag-close {
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px var(--secondary-color);
+}
+
+/* Animations */
+@keyframes tagGlow {
+  0%, 100% { 
+    text-shadow: 0 0 5px currentColor;
+    transform: scale(1);
+  }
+  50% { 
+    text-shadow: 0 0 15px currentColor;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .logo-container {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .logo-tag {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .logo-tag {
+    font-size: 1rem;
+  }
+}
