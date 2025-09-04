@@ -25,6 +25,28 @@ Visit the live portfolio: [Portfolio Website](https://shreyashkale.netlify.app)
 - **Icons**: Lucide React for consistent iconography
 - **Routing**: React Router for seamless navigation
 - **State Management**: React Context for theme management
+- **Email Service**: EmailJS for contact form functionality
+
+## 🚀 Deployment
+
+The portfolio is configured for deployment on Netlify with the following setup:
+
+- **Build Command**: `npm run build`
+- **Publish Directory**: `build`
+- **Node Version**: 18
+- **Secrets Scanning**: Disabled for EmailJS public keys (these are frontend public keys, not secrets)
+
+### Environment Variables
+
+The following environment variables need to be configured in your deployment platform:
+
+```
+REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+**Note**: EmailJS public keys are designed to be exposed in frontend code and are not considered secrets.
 
 ## 🎨 Theme System
 

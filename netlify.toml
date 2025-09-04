@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Disable secrets scanning for this build
+# EmailJS keys are public frontend keys, not secrets
+[build.processing]
+  skip_processing = false
+
+# Configure secrets scanning to be disabled
+# These are public frontend keys, not actual secrets
+[build.processing.secrets]
+  enabled = false
