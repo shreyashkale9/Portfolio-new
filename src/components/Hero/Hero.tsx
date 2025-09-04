@@ -26,6 +26,14 @@ const Hero: React.FC = (): React.JSX.Element => {
 
   return (
     <section className="hero">
+      {/* Floating Bubbles - Only on Hero Section */}
+      <div className="hero-bubbles">
+        <div className="hero-bubble bubble-1"></div>
+        <div className="hero-bubble bubble-2"></div>
+        <div className="hero-bubble bubble-3"></div>
+        <div className="hero-bubble bubble-4"></div>
+        <div className="hero-bubble bubble-5"></div>
+      </div>
       <div className="container">
         <motion.div
           className="hero-content"

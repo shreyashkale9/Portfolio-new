@@ -1,10 +1,11 @@
 .experience {
   background: white;
+  padding: 4rem 0;
 }
 
 .experience-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .experience-timeline {
@@ -25,7 +26,7 @@
 
 .experience-item {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   padding-left: 4rem;
 }
 
@@ -44,7 +45,7 @@
 
 .experience-content {
   background: var(--bg-secondary);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
@@ -131,12 +132,21 @@
 }
 
 @media (max-width: 768px) {
+  .experience {
+    padding: 3rem 0;
+  }
+  
+  .experience-header {
+    margin-bottom: 2rem;
+  }
+  
   .experience-timeline::before {
     left: 1.5rem;
   }
   
   .experience-item {
     padding-left: 3rem;
+    margin-bottom: 1.5rem;
   }
   
   .experience-item::before {
@@ -144,7 +154,7 @@
   }
   
   .experience-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   
   .experience-meta {

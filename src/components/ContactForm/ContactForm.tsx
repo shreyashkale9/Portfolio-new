@@ -108,7 +108,6 @@ const ContactForm: React.FC = (): React.JSX.Element => {
         });
       }
     } catch (error) {
-      console.error('Email sending failed:', error);
       alert('Failed to send message. Please try again or contact me directly.');
     } finally {
       setIsSubmitting(false);

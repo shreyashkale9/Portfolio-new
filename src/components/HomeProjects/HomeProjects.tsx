@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import ProjectGrid from '../ProjectGrid/ProjectGrid';
 import './HomeProjects.css';
 
@@ -41,9 +42,9 @@ const HomeProjects: React.FC = (): React.JSX.Element => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <a href="/projects" className="btn btn-secondary">
+          <Link to="/projects" className="btn btn-secondary">
             View All Projects
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

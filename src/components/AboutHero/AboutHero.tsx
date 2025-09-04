@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, MapPin, Mail, Phone } from 'lucide-react';
+import { User, MapPin, Mail, Phone, Github } from 'lucide-react';
 import './AboutHero.css';
 
 /**
@@ -12,7 +12,7 @@ const AboutHero: React.FC = (): React.JSX.Element => {
     { icon: MapPin, label: 'Location', value: 'Bengaluru, India' },
     { icon: Phone, label: 'Phone', value: '+91 9653268606' },
     { icon: Mail, label: 'Email', value: 'shreyashkale9@gmail.com' },
-    { icon: Phone, label: 'GitHub', value: 'github.com/shreyashkale9' }
+    { icon: Github, label: 'GitHub', value: 'github.com/shreyashkale9' }
   ];
 
   const containerVariants = {
@@ -31,7 +31,7 @@ const AboutHero: React.FC = (): React.JSX.Element => {
   };
 
   return (
-    <section className="about-hero section">
+    <section className="about-hero">
       <div className="container">
         <motion.div
           className="about-hero-content"

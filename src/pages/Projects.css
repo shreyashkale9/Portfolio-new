@@ -1,7 +1,6 @@
 .projects-page {
-  padding-top: 6rem;
+  padding: 6rem 0 4rem 0;
   background: var(--bg-secondary);
-  min-height: 100vh;
 }
 
 .projects-header {
@@ -26,7 +25,7 @@
 
 @media (max-width: 768px) {
   .projects-page {
-    padding-top: 4rem;
+    padding: 5rem 0 3rem 0;
   }
   
   .page-title {

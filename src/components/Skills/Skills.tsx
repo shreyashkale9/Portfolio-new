@@ -63,8 +63,8 @@ const Skills: React.FC = (): React.JSX.Element => {
   };
 
   return (
-    <section className="skills section">
-      <div className="container">
+    <section className="skills">
+      <div className="skills-content">
         <motion.div
           className="skills-header"
           initial={{ opacity: 0, y: 30 }}

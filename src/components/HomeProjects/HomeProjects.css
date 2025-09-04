@@ -1,11 +1,12 @@
 /* Home Projects Section Styles */
 .home-projects {
   background: var(--bg-secondary);
+  padding: 4rem 0;
 }
 
 .home-projects-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .section-title {
@@ -29,8 +30,8 @@
 
 .view-all-projects {
   text-align: center;
-  margin-top: 3rem;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border-color);
 }
 
@@ -50,8 +51,8 @@
 .featured-projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Responsive grid adjustments */
@@ -64,6 +65,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .home-projects {
+    padding: 3rem 0;
+  }
+  
   .section-title {
     font-size: 2rem;
   }
@@ -73,12 +78,12 @@
   }
   
   .home-projects-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   
   .view-all-projects {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
   }
 }
 
