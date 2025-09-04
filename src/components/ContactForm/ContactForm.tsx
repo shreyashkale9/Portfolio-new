@@ -20,7 +20,6 @@ const ContactForm: React.FC = (): React.JSX.Element => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-
   // Initialize EmailJS
   useEffect(() => {
     const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
