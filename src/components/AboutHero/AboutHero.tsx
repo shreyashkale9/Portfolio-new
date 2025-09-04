@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, MapPin, Mail, Phone, Github } from 'lucide-react';
+import { MapPin, Mail, Phone, Github } from 'lucide-react';
 import './AboutHero.css';
 
 /**
@@ -55,7 +55,11 @@ const AboutHero: React.FC = (): React.JSX.Element => {
 
           <motion.div className="about-image-section" variants={itemVariants}>
             <div className="profile-image">
-              <User className="profile-icon" />
+              <img 
+                src="/profile.jpg" 
+                alt="Shreyash Kale - Software Engineer" 
+                className="profile-photo"
+              />
             </div>
             
             <div className="personal-details">
