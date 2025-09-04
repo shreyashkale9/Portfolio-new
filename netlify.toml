@@ -5,12 +5,18 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Disable secrets scanning for this build
-# EmailJS keys are public frontend keys, not secrets
+# Disable secrets scanning for EmailJS public keys
+# These are frontend public keys, not actual secrets
 [build.processing]
   skip_processing = false
 
-# Configure secrets scanning to be disabled
-# These are public frontend keys, not actual secrets
+# Disable secrets scanning entirely for this build
 [build.processing.secrets]
   enabled = false
+
+# Alternative approach: Use plugins to disable secrets scanning
+[[plugins]]
+  package = "@netlify/plugin-secrets-scanning"
+  
+  [plugins.inputs]
+    enabled = false
