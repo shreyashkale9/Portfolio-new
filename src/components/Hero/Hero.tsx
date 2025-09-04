@@ -57,7 +57,13 @@ const Hero: React.FC = (): React.JSX.Element => {
               Get In Touch
               <ArrowRight className="btn-icon" />
             </Link>
-            <a href="/Shreyash_Kale_s_CV.pdf" className="btn btn-secondary" download>
+            <a 
+              href="/Shreyash_Kale_s_CV.pdf" 
+              className="btn btn-secondary" 
+              download="Shreyash_Kale_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Download className="btn-icon" />
               Download CV
             </a>
