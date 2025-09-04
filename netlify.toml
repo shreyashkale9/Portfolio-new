@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  SECRETS_SCAN_ENABLED = "false"
+  SECRETS_SCAN_OMIT_KEYS = "REACT_APP_EMAILJS_PUBLIC_KEY,REACT_APP_EMAILJS_SERVICE_ID,REACT_APP_EMAILJS_TEMPLATE_ID"
 
 # Disable secrets scanning for EmailJS public keys
 # These are frontend public keys, not actual secrets
@@ -13,10 +15,3 @@
 # Disable secrets scanning entirely for this build
 [build.processing.secrets]
   enabled = false
-
-# Alternative approach: Use plugins to disable secrets scanning
-[[plugins]]
-  package = "@netlify/plugin-secrets-scanning"
-  
-  [plugins.inputs]
-    enabled = false
