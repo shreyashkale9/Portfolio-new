@@ -83,13 +83,13 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ activeFilter }): React.JSX.El
     },
     {
       id: 7,
-      title: 'Login Page with Firebase',
-      description: 'Authentication system built with React.js and Firebase. Secure user login and registration functionality.',
+      title: 'ThinkSheet',
+      description: 'A minimal web app for writing and saving handwritten notes temporarily. Only one note can be saved at a time, making it distraction-free and simple for quick thoughts.',
       image: '/api/placeholder/400/300',
-      category: 'fullstack',
-      technologies: ['React.js', 'Firebase', 'Authentication', 'JavaScript'],
-      liveUrl: 'https://github.com/shreyashkale9/Login-Page-With-Firebase',
-      githubUrl: 'https://github.com/shreyashkale9/Login-Page-With-Firebase',
+      category: 'frontend',
+      technologies: ['React.js', 'JavaScript', 'CSS', 'Netlify'],
+      liveUrl: 'https://thinksheet.netlify.app/',
+      githubUrl: 'https://github.com/shreyashkale9/ThinkSheet',
       featured: false
     },
     {
@@ -99,7 +99,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ activeFilter }): React.JSX.El
       image: '/api/placeholder/400/300',
       category: 'frontend',
       technologies: ['JavaScript', 'HTML', 'CSS', 'Game Logic'],
-      liveUrl: 'https://github.com/shreyashkale9/Tic-Tac-Toe',
+      liveUrl: 'https://shreyashkale9tictactoe.netlify.app/',
       githubUrl: 'https://github.com/shreyashkale9/Tic-Tac-Toe',
       featured: false
     }
