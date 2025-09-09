@@ -55,7 +55,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ activeFilter }): React.JSX.El
       image: '/api/placeholder/400/300',
       category: 'frontend',
       technologies: ['TypeScript', 'React', 'Modern Web Tech', 'Notes App'],
-      liveUrl: 'https://github.com/shreyashkale9/ThoughtCloud',
+      liveUrl: 'https://thought-cloud-frontend.vercel.app/',
       githubUrl: 'https://github.com/shreyashkale9/ThoughtCloud',
       featured: false
     },
@@ -66,7 +66,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ activeFilter }): React.JSX.El
       image: '/api/placeholder/400/300',
       category: 'frontend',
       technologies: ['JavaScript', 'Weather API', 'CSS', 'HTML'],
-      liveUrl: 'https://github.com/shreyashkale9/Weather_App',
+      liveUrl: 'https://shreyashkale9weatherapp.netlify.app/',
       githubUrl: 'https://github.com/shreyashkale9/Weather_App',
       featured: false
     },
@@ -77,7 +77,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ activeFilter }): React.JSX.El
       image: '/api/placeholder/400/300',
       category: 'frontend',
       technologies: ['React.js', 'JavaScript', 'CSS', 'Calculator UI'],
-      liveUrl: 'https://github.com/shreyashkale9/Calculator-With-Reactjs',
+      liveUrl: 'https://shreyashkale9calculator.netlify.app/',
       githubUrl: 'https://github.com/shreyashkale9/Calculator-With-Reactjs',
       featured: false
     },
