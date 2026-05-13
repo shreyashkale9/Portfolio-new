@@ -1,0 +1,20 @@
+# Dependency directories
+node_modules/
+
+# Environment variables (CRITICAL: Protects your Gemini & Razorpay keys)
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Operating System Files (Common on macOS)
+.DS_Store
+Thumbs.db
+
+# Optional: IDE folders
+.vscode/
+.idea/
