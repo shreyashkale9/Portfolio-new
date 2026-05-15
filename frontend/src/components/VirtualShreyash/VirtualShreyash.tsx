@@ -43,7 +43,7 @@ const VirtualShreyash: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://portfolio-new-ux4p.onrender.com/ask-shreyash', {
+      const response = await fetch('https://portfolio-new-1-eg19.onrender.com/ask-shreyash', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: textToSend })
