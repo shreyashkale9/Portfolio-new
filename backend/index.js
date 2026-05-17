@@ -19,18 +19,27 @@ const razorpay = new Razorpay({
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
-app.post('/create-order', async (req, res) => {
+app.post("/create-order", async (req, res) => {
   try {
+    // 1. Extract the dynamic amount sent from your React frontend
+    const { amount } = req.body;
+
+    // 2. Razorpay requires the amount in PAISE. 
+    // Multiply the Rupee amount by 100. (e.g., ₹50 * 100 = 5000 paise)
+    const amountInPaise = amount * 100; 
+
     const options = {
-      amount: 10000, 
+      amount: amountInPaise, 
       currency: "INR",
-      receipt: `receipt_${Date.now()}`,
+      receipt: `receipt_order_${Math.floor(Math.random() * 1000)}`,
     };
+
     const order = await razorpay.orders.create(options);
     res.json(order);
+
   } catch (error) {
-    console.error("❌ Error creating order:", error);
-    res.status(500).send("Failed to create order");
+    console.error("Error creating order:", error);
+    res.status(500).json({ error: "Failed to create order" });
   }
 });
 
